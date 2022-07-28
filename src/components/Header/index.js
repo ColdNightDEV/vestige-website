@@ -99,7 +99,7 @@ const HamburgerBtn = styled.button`
     display: inline-block;
   }
   position: relative;
-  background-color: transparent;
+  background-color: Black;
   width: 2rem;
   height: 2px;
   margin-top: 0rem;
