@@ -9,7 +9,7 @@ const Headers = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5rem;
-  background-color: var(--white);
+  background-color: wheat;
   color: var(--black);
   position: relative;
   z-index: 500;
@@ -99,7 +99,7 @@ const HamburgerBtn = styled.button`
     display: inline-block;
   }
   position: relative;
-  background-color: Black;
+  background-color: transparent;
   width: 2rem;
   height: 2px;
   margin-top: 0rem;
