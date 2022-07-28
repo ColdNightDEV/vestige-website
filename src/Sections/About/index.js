@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import wave from "../../assets/waves.svg";
-import rocket from "../../assets/rocket image.png";
-import human from "../../assets/human.svg";
+import rocket from "../../assets/image-bounce.png";
+import human from "../../assets/AR.png";
 import hand from "../../assets/hand.svg";
 
 const move = keyframes`
@@ -96,7 +96,7 @@ const Human = styled.div`
   }
 `;
 const Text = styled.h4`
-  font-size: calc(0.5rem + 1vw);
+  font-size: calc(0.36rem + 1vw);
   line-height: 1.5;
   color: var(--nav2);
 `;
@@ -139,10 +139,9 @@ const About = () => {
             </Human>
 
             <Text>
-              We help our customers to tell about themselves, to grow and stand
-              out in an increasingly competitive digital world, through creative
-              projects that are able to attract and involve, creating strategic
-              value.
+              VESTIGE STUDIOS IS A CREATIVE-LED ORGANIZATIOIN THE WEB3 WORLD.
+              OUR GOAL IS TO BRING THE VIRTUAL WORLD TO LIFE THROUGH OUR INTEGRATED DESIGNS BASED IN THE FASCINATING WORLD OF THE METAVERSE.
+              WE USE NFTs, AR TECHNOLOGY AND VR TECHNOLOGY TO BRING YOU THE BEST VIRTUAL EXPERIENCE.
             </Text>
             <div>
               <Circle style={{ backgroundColor: "var(--purple)" }} />

@@ -2,15 +2,15 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/logo.png";
 
 const Headers = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5rem;
-  background-color: var(--nav);
-  color: var(--white);
+  background-color: var(--white);
+  color: var(--black);
   position: relative;
   z-index: 500;
   @media only Screen and (max-width: 64em) {
@@ -45,7 +45,7 @@ const Nav = styled.nav`
   a {
     font-weight: 600;
     line-height: 1.5;
-    color: var(--white);
+    color: var(--black);
     &::after {
       content: "";
       display: block;
@@ -164,20 +164,16 @@ const Header = () => {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  const scrollUp = (id, e) => {
-    e.preventDefault();
-    const element = document.getElementById(id);
-    element.scrollIntoView({
-      behavior: "smooth",
-      block: "end",
-      inline: "nearest",
-    });
-  };
+  // const scrollUp = (id, e) => {
+  //   e.preventDefault();
+  //   const element = document.getElementById(id);
+  //   element.scrollIntoView({
+  //     behavior: "smooth",
+  //     block: "end",
+  //     inline: "nearest",
+  //   });
+  // };
 
-  const handleClick = (id, e) => {
-    setClick(!click);
-    scrollUp(id, e);
-  };
 
   useEffect(() => {
     const element = ref.current;
@@ -235,37 +231,37 @@ const Header = () => {
     <Headers ref={ref}>
       <Logo>
         <img src={logo} alt="CodeBucks" />
-        <h3>CodeBucks</h3>
+        <h3>Vestige</h3>
       </Logo>
       <Nav>
-        <a href="#home" onClick={(e) => scrollUp("home", e)}>
-          Home
+        <a href="#home">
+          Twitter
         </a>
-        <a href="#about" onClick={(e) => scrollUp("about", e)}>
-          About Us
+        <a href="#about">
+          Instagram
         </a>
-        <a href="#services" onClick={(e) => scrollUp("services", e)}>
-          Services
+        <a href="#services">
+          Outerverse Vessels
         </a>
-        <a href="#contact" onClick={(e) => scrollUp("contact", e)}>
-          <Button>Contact Us</Button>
+        <a href="#contact">
+          <Button>Discord</Button>
         </a>
       </Nav>
       <HamburgerBtn clicked={click} onClick={() => setClick(!click)}>
         <span></span>
       </HamburgerBtn>
       <MobileMenu clicked={click}>
-        <a href="#home" onClick={(e) => handleClick("home", e)}>
-          Home
+        <a href="#home">
+          Twitter
         </a>
-        <a href="#about" onClick={(e) => handleClick("about", e)}>
-          About Us
+        <a href="#about">
+          Instagram
         </a>
-        <a href="#services" onClick={(e) => handleClick("services", e)}>
-          Services
+        <a href="#services">
+          Outerverse Vessels
         </a>
-        <a href="#contact" onClick={(e) => handleClick("contact", e)}>
-          <Button>Contact Us</Button>
+        <a href="#contact">
+          <Button>Join our Discord</Button>
         </a>
       </MobileMenu>
     </Headers>

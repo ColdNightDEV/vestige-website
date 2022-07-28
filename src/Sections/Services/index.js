@@ -3,12 +3,14 @@ import { useEffect, useRef } from "react";
 import styled from "styled-components";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Tube from "../../assets/3dtube.png";
-import Cone from "../../assets/3dtriangle.png";
-import Capsule from "../../assets/3dcapsule.png";
+// import Tube from "../../assets/3dtube.png";
+import vr from "../../assets/image-bounce.png";
+import dollar from "../../assets/dollar.png";
+// import Cone from "../../assets/3dtriangle.png";
+// import Capsule from "../../assets/3dcapsule.png";
 
 import TextBlock from "../../components/TextBlock";
-import SvgBlock from "../../components/SvgBlock";
+// import SvgBlock from "../../components/SvgBlock";
 
 // const TextBlock = lazy(() => import("../../components/TextBlock"));
 // const SvgBlock = lazy(() => import("../../components/SvgBlock"));
@@ -327,50 +329,32 @@ const Services = () => {
       <Content ref={addToRefs}>
         <TextBlock
           topic="Design"
-          title={<h1>We build award winning Designs</h1>}
+          title={<h1>An Extra income Opportunity?</h1>}
           subText={
             <h5>
-              We help clients to build great design to attract more customers
+              We give our community the opportunity to make passive income & earn from NFTs
             </h5>
           }
         />
         <OBJ>
-          <img src={Tube} alt="Tube Object" width="400" height="400" />
+          <img src={dollar} alt="Tube Object" width="400" height="400" />
         </OBJ>
-        <SvgBlock svg="Design.svg" />
+        {/* <SvgBlock svg="Design.svg" /> */}
       </Content>
       <Content ref={addToRefs}>
         <TextBlock
           topic="Develop"
-          title={<h1>We Develope high quality Web & App</h1>}
+          title={<h1>Virtual World in our& Reality</h1>}
           subText={
             <h5>
-              We build appropriate solution to develope your website & app with
-              best tools available
+              We take you to the metaverse using VR, AR AND NFTs
             </h5>
           }
         />
         <OBJ>
-          <img src={Cone} alt="Cone Object" width="400" height="400" />
+          <img src={vr} alt="Cone Object" width="400" height="400" />
         </OBJ>
-        <SvgBlock svg="Develope.svg" />
-      </Content>
-      <Content>
-        <TextBlock
-          topic="Support"
-          title={<h1>We provide support for your digital presence</h1>}
-          subText={
-            <h5>
-              Once your system is online, we will stay on hand to help you use
-              it and provide technical support and maintenance <br /> your
-              business
-            </h5>
-          }
-        />
-        <OBJ>
-          <img src={Capsule} alt="Capsule Object" width="400" height="400" />
-        </OBJ>
-        <SvgBlock svg="Support.svg" />
+        {/* <SvgBlock svg="Develope.svg" /> */}
       </Content>
     </ServiceSection>
   );

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Twitter from "../../assets/twitter-square-brands.svg";
 import Instagram from "../../assets/instagram-square-brands.svg";
-import Gmail from "../../assets/envelope-open-solid.svg";
+import Discord from "../../assets/discord.svg";
 
 const FOOTER = styled.footer`
   padding: 1.2rem calc(2.5rem + 2.5vw);
@@ -9,6 +9,7 @@ const FOOTER = styled.footer`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: wheat;
   @media only Screen and (max-width: 48em) {
     flex-direction: column;
     align-items: center;
@@ -47,23 +48,20 @@ const Footer = () => {
   return (
     <FOOTER>
       <LeftText>
-        © 2021 Built and Design by{" "}
-        <a href="https://www.youtube.com/channel/UCeYt6blRBKuNrEg_-282fSA">
-          @CodeBucks
-        </a>
+        © 2021 Built and Design by{" Vestige-Studios "}
       </LeftText>
       <RightText>
-        Reach out to me via 😉
-        <a href="https://twitter.com/code_bucks">
+        
+        <a href="https://twitter.com/">
           <img src={Twitter} alt="Twitter" />
         </a>
         &nbsp;
-        <a href="https://www.instagram.com/code.bucks/">
+        <a href="https://www.instagram.com/">
           <img src={Instagram} alt="Instagram" />
         </a>
         &nbsp;
-        <a href="mailto:codebucks27@gmail.com?subject=Email From Your Website">
-          <img src={Gmail} alt="Gmail" />
+        <a href="mailto:?subject=Email From Your Website">
+          <img src={Discord} alt="Gmail" />
         </a>
       </RightText>
     </FOOTER>
@@ -72,4 +70,4 @@ const Footer = () => {
 
 export default Footer;
 
-//© 2021 by CodeBucks. Design by @CodeBucks.
+//© 2021 by Legadax

@@ -2,9 +2,8 @@
 
 import styled, { keyframes } from "styled-components";
 
-import pinkBlob from "../../assets/blobPink.png";
-import purpleBlob from "../../assets/blob purple.png";
-import whiteBlob from "../../assets/blob white.png";
+import logosvg from "../../assets/logo.svg";
+import logosvg1 from "../../assets/logo.png";
 import arrow from "../../assets/Arrow Right.svg";
 import Mobile from "../../assets/mobile.svg";
 
@@ -17,7 +16,7 @@ const move = keyframes`
 const HomeSection = styled.section`
   width: 100vw;
   height: 45vw;
-  background-color: #0a0b10;
+  background-color: lightblue;
   display: flex;
   justify-content: center;
   position: relative;
@@ -177,13 +176,13 @@ const HeroSection = () => {
     <HomeSection id="home">
       <Blobs>
         <PinkBlob>
-          <img src={pinkBlob} alt="" width="400" height="400" />{" "}
+          <img src={logosvg1} alt="" width="400" height="400" />{" "}
         </PinkBlob>
         <WhiteBlob>
-          <img src={whiteBlob} alt="" width="400" height="400" />
+          <img src={logosvg} alt="" width="400" height="400" />
         </WhiteBlob>
         <PurpleBlob>
-          <img src={purpleBlob} alt="" width="400" height="400" />
+          <img src={logosvg1} alt="" width="400" height="400" />
         </PurpleBlob>
       </Blobs>
 
@@ -191,14 +190,14 @@ const HeroSection = () => {
         <Lb id="leftBlock">
           <Topic>
             <Circle />
-            <span>We Build Web</span>
+            <span>The Metaverse</span>
           </Topic>
-          <Title>Transforming your digital presence</Title>
+          <Title>Vestige Studios</Title>
           <SubText>
-            we help fast growing companies build award winning websites
+            Creating a Metaverse for You and Me 💖
           </SubText>
           <CTA>
-            Get in touch &nbsp;
+            Join our Discord &nbsp;
             <img src={arrow} alt="cta" width="100" height="100" />
           </CTA>
         </Lb>
