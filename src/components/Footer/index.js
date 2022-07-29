@@ -9,7 +9,8 @@ const FOOTER = styled.footer`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: wheat;
+  background-color: #0071CE;
+  color: var(--white);
   @media only Screen and (max-width: 48em) {
     flex-direction: column;
     align-items: center;
@@ -48,7 +49,7 @@ const Footer = () => {
   return (
     <FOOTER>
       <LeftText>
-        © 2021 Built and Design by{" Vestige-Studios "}
+        {" Vestige-Studios "}
       </LeftText>
       <RightText>
         

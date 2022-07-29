@@ -4,8 +4,8 @@ import styled from "styled-components";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import Tube from "../../assets/3dtube.png";
-import vr from "../../assets/image-bounce.png";
-import dollar from "../../assets/dollar.png";
+// import vr from "../../assets/image-bounce.png";
+// import dollar from "../../assets/dollar.png";
 // import Cone from "../../assets/3dtriangle.png";
 // import Capsule from "../../assets/3dcapsule.png";
 
@@ -38,30 +38,11 @@ const Background = styled.div`
   width: 100vw;
   height: 85vh;
   z-index: -1;
-  background-color: #0a0b10;
+  background-color: #0071CE;
   background-size: auto 100vh;
   background-repeat: no-repeat;
 `;
 
-const Title = styled.h1`
-  color: var(--white);
-  display: inline-block;
-  font-size: 2rem;
-  /* margin-top: 4rem; */
-  margin-top: 1rem;
-  position: relative;
-  &::before {
-    content: "";
-    height: 1px;
-    width: 50%;
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translate(-50%, 0.5rem);
-    /* or 100px */
-    border-bottom: 2px solid var(--pink);
-  }
-`;
 
 const Line = styled.span`
   border-left: 4px solid var(--background);
@@ -70,13 +51,13 @@ const Line = styled.span`
   border-radius: 20px 20px 0 0;
 `;
 
-const Triangle = styled.span`
-  width: 0;
-  height: 0;
-  border-left: 1.2rem solid transparent;
-  border-right: 1.2rem solid transparent;
-  border-top: 2rem solid var(--background);
-`;
+// const Triangle = styled.span`
+//   width: 0;
+//   height: 0;
+//   border-left: 1.2rem solid transparent;
+//   border-right: 1.2rem solid transparent;
+//   border-top: 2rem solid var(--background);
+// `;
 
 const Content = styled.div`
   display: flex;
@@ -321,38 +302,96 @@ const Services = () => {
   return (
     <ServiceSection id="services">
       <Background ref={ref}>
-        <Title className="title">What We Do</Title>
+        {/* <Title className="title">About Us</Title> */}
         <Line id="line" />
-        <Triangle id="triangle" />
+        {/* <Triangle id="triangle" /> */}
       </Background>
 
       <Content ref={addToRefs}>
         <TextBlock
           topic="Design"
-          title={<h1>An Extra income Opportunity?</h1>}
-          subText={
-            <h5>
-              We give our community the opportunity to make passive income & earn from NFTs
-            </h5>
-          }
+          title={<h1>VESTIGE STUDIOS IS A CREATOR-LED ORGANIZATION IN THE WEB3 WORLD</h1>}
         />
         <OBJ>
-          <img src={dollar} alt="Tube Object" width="400" height="400" />
         </OBJ>
         {/* <SvgBlock svg="Design.svg" /> */}
+      </Content>
+
+      <Content ref={addToRefs}>
+        <TextBlock
+          topic="Develop"
+          title={<h1>OUR GOAL IS TO BRING THE VIRTUAL WORLD TO LIFE</h1>}
+        />
+        <OBJ>
+        </OBJ>
+        {/* <SvgBlock svg="Develope.svg" /> */}
+      </Content>
+
+      <Content ref={addToRefs}>
+        <TextBlock
+          topic="Develop"
+          title={<h1>THROUGH OUR INTEGRATED DESIGNS BASED</h1>}
+        />
+        <OBJ>
+        </OBJ>
+        {/* <SvgBlock svg="Develope.svg" /> */}
+      </Content>
+      
+      <Content ref={addToRefs}>
+        <TextBlock
+          topic="Develop"
+          title={<h1>IN THE FASCINATING WORLD OF THE METAVERSE</h1>}
+        />
+        <OBJ>
+        </OBJ>
+        {/* <SvgBlock svg="Develope.svg" /> */}
+      </Content>
+
+      <Content ref={addToRefs}>
+        <TextBlock
+          topic="Develop"
+          title={<h1>WE USE</h1>}
+        />
+        <OBJ>
+        </OBJ>
+        {/* <SvgBlock svg="Develope.svg" /> */}
+      </Content>
+      
+      <Content ref={addToRefs}>
+        <TextBlock
+          topic="Develop"
+          title={<h1>NFTS</h1>}
+        />
+        <OBJ>
+        </OBJ>
+        {/* <SvgBlock svg="Develope.svg" /> */}
+      </Content>
+      
+      <Content ref={addToRefs}>
+        <TextBlock
+          topic="Develop"
+          title={<h1>AR TECHNOLOGY,</h1>}
+        />
+        <OBJ>
+        </OBJ>
+        {/* <SvgBlock svg="Develope.svg" /> */}
       </Content>
       <Content ref={addToRefs}>
         <TextBlock
           topic="Develop"
-          title={<h1>Virtual World in our& Reality</h1>}
-          subText={
-            <h5>
-              We take you to the metaverse using VR, AR AND NFTs
-            </h5>
-          }
+          title={<h1>AND VR TECHNOLOGY,</h1>}
         />
         <OBJ>
-          <img src={vr} alt="Cone Object" width="400" height="400" />
+        </OBJ>
+        {/* <SvgBlock svg="Develope.svg" /> */}
+      </Content>
+      <Content ref={addToRefs}>
+        <TextBlock
+          topic="Develop"
+          title={<h1>TO BRING YOU THE
+BEST VIRTUAL EXPERIENCE,</h1>}
+        />
+        <OBJ>
         </OBJ>
         {/* <SvgBlock svg="Develope.svg" /> */}
       </Content>

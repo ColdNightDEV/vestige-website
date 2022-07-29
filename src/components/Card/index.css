@@ -1,0 +1,16 @@
+/* .card { 
+  height: calc(4rem + 13vw);
+  width: calc(8rem + 13vw);
+  background-image: url("./join.png");
+  border-radius: 10px;
+  position: relative;
+  margin-top: calc(5rem + 5vw);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+.card {
+    background-image: url("./join.png");
+}

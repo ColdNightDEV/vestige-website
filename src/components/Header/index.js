@@ -9,8 +9,8 @@ const Headers = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5rem;
-  background-color: var(--white);
-  color: var(--black);
+  background-color: #0071CE;
+  color: var(--white);
   position: relative;
   z-index: 500;
   @media only Screen and (max-width: 64em) {
@@ -35,6 +35,7 @@ const Logo = styled.a`
 const Nav = styled.nav`
   width: 25rem;
   max-width: 40rem;
+  padding: 2px 1px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -45,7 +46,7 @@ const Nav = styled.nav`
   a {
     font-weight: 600;
     line-height: 1.5;
-    color: var(--black);
+    color: var(--white);
     &::after {
       content: "";
       display: block;
@@ -56,7 +57,7 @@ const Nav = styled.nav`
     }
     &:not(:last-child):hover::after {
       width: 100%;
-      background: var(--purple);
+      background: var(--white);
     }
     /* &:not(:last-child) {
       margin-right: 2rem;
@@ -70,12 +71,12 @@ const Nav = styled.nav`
 `;
 
 const Button = styled.button`
-  background-color: var(--purple);
+  background-color: var(--white);
   padding: 0.5rem 1rem;
-  border-radius: 20px;
-  color: var(--white);
+  color: var(--black);
   font-weight: 600;
   cursor: pointer;
+  border-radius: 20px;
   transition: all 0.2s;
   &:hover {
     transform: scale(1.1);
@@ -100,8 +101,8 @@ const HamburgerBtn = styled.button`
   }
   position: relative;
   background-color: transparent;
-  width: 2rem;
-  height: 2px;
+  width: 1rem;
+  height: 2.5px;
   margin-top: 0rem;
   transition: all 0.3s;
   cursor: pointer;
@@ -110,7 +111,7 @@ const HamburgerBtn = styled.button`
     content: "";
     background-color: var(--white);
     width: 2rem;
-    height: 2px;
+    height: 1.5px;
     display: inline-block;
     position: absolute;
     left: 0;
@@ -147,7 +148,6 @@ const MobileMenu = styled.nav`
   transition: all 0.5s;
   z-index: -10;
   background-color: rgb(53 53 63 / 95%);
-  border-radius: 20px;
   margin: 0.5rem;
   a {
     color: var(--white);
@@ -188,7 +188,7 @@ const Header = () => {
         right: "0",
         padding: "1rem 2.5rem",
 
-        borderRadius: "0 0 50px 50px",
+        // borderRadius: "0 0 50px 50px",
 
         border: "2px solid var(--white)",
 
@@ -210,7 +210,7 @@ const Header = () => {
         right: "3rem",
         padding: "1.5rem 2rem",
 
-        borderRadius: "50px",
+        // borderRadius: "50px",
 
         border: "3px solid var(--white)",
 
