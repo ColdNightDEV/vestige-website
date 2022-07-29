@@ -37,10 +37,6 @@ const About = () => {
         <div>
           {/* <Title>About Us</Title> */}
           <img src={metaverse} alt="About" />
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
         </div>
       </Main>
     </AboutSection>

@@ -9,7 +9,7 @@ const FOOTER = styled.footer`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #0071CE;
+  background-color: grey;
   color: var(--white);
   @media only Screen and (max-width: 48em) {
     flex-direction: column;

@@ -3,13 +3,15 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import logo from "../../assets/logo.png";
+import twitter from "../../assets/twitter.png";
+import discord from "../../assets/discord.png";
 
 const Headers = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5rem;
-  background-color: #0071CE;
+  padding: 1rem 4rem;
+  background-color: grey;
   color: var(--white);
   position: relative;
   z-index: 500;
@@ -24,7 +26,7 @@ const Headers = styled.header`
 const Logo = styled.a`
   display: flex;
   align-items: center;
-  width: 2rem;
+  width: 2em;
   height: auto;
   cursor: pointer;
   img {
@@ -35,13 +37,21 @@ const Logo = styled.a`
 const Nav = styled.nav`
   width: 25rem;
   max-width: 40rem;
-  padding: 2px 1px;
+  // padding: 2px 1px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   transition: all 0.3s;
   @media only Screen and (max-width: 48em) {
     display: none;
+  }
+  img{
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    // margin-left: 0.5rem;
   }
   a {
     font-weight: 600;
@@ -131,13 +141,13 @@ const HamburgerBtn = styled.button`
 
 const MobileMenu = styled.nav`
   display: none;
+  height: 100vh;
   @media only Screen and (max-width: 48em) {
     display: flex;
   }
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem 0;
   overflow-x: hidden;
   position: absolute;
   top: 100%;
@@ -155,6 +165,9 @@ const MobileMenu = styled.nav`
     font-size: 1.5rem;
     margin: 1.5rem;
     cursor: pointer;
+  }
+  img {
+    margin-right: 0.5rem;
   }
 `;
 const Header = () => {
@@ -186,11 +199,11 @@ const Header = () => {
         top: "0",
         left: "0",
         right: "0",
-        padding: "1rem 2.5rem",
+        // padding: "1rem 2.5rem",
 
         // borderRadius: "0 0 50px 50px",
 
-        border: "2px solid var(--white)",
+        // border: "2px solid var(--black)",
 
         duration: 1,
         ease: "power1.out",
@@ -208,11 +221,11 @@ const Header = () => {
         top: "1rem",
         left: "3rem",
         right: "3rem",
-        padding: "1.5rem 2rem",
+        // padding: "1.5rem 2rem",
 
         // borderRadius: "50px",
 
-        border: "3px solid var(--white)",
+        // border: "3px solid var(--black)",
 
         duration: 1,
         ease: "power1.out",
@@ -235,10 +248,10 @@ const Header = () => {
       </Logo>
       <Nav>
         <a href="#home">
-          Twitter
+        <img src={twitter} alt="CodeBucks" />
         </a>
         <a href="#about">
-          Instagram
+        <img src={discord} alt="CodeBucks" />
         </a>
         <a href="#services">
           Outerverse Vessels
@@ -252,16 +265,16 @@ const Header = () => {
       </HamburgerBtn>
       <MobileMenu clicked={click}>
         <a href="#home">
-          Twitter
+          Follow the Twitter
         </a>
         <a href="#about">
-          Instagram
+          Follow the Instagram
         </a>
         <a href="#services">
           Outerverse Vessels
         </a>
         <a href="#contact">
-          <Button>Join our Discord</Button>
+          <Button>Join the Discord</Button>
         </a>
       </MobileMenu>
     </Headers>
