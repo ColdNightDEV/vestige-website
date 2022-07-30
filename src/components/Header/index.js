@@ -37,7 +37,7 @@ const Logo = styled.a`
 const Nav = styled.nav`
   width: 25rem;
   max-width: 40rem;
-  // padding: 2px 1px;
+  padding: 2px 1px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -51,10 +51,11 @@ const Nav = styled.nav`
     cursor: pointer;
     align-items: center;
     display: flex;
-    // margin-left: 0.5rem;
+    margin-left: 0.5rem;
   }
   a {
     font-weight: 600;
+    padding: 10px;
     line-height: 1.5;
     color: var(--white);
     &::after {
@@ -256,9 +257,9 @@ const Header = () => {
         <a href="#services">
           Outerverse Vessels
         </a>
-        <a href="#contact">
+        {/* <a href="#contact">
           <Button>Discord</Button>
-        </a>
+        </a> */}
       </Nav>
       <HamburgerBtn clicked={click} onClick={() => setClick(!click)}>
         <span></span>

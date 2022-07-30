@@ -25,11 +25,6 @@ const Main = styled.div`
     margin: 3rem calc(3rem + 3vw);
   }
 `;
-
-// const Title = styled.h1`
-//   font-size: 2rem;
-//   display: inline-block;
-// `;
 const About = () => {
   return (
     <AboutSection id="about">
