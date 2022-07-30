@@ -2,14 +2,16 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/logo.png";
+import twitter from "../../assets/twitter.png";
+import discord from "../../assets/discord.png";
 
 const Headers = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5rem;
-  background-color: var(--nav);
+  padding: 1rem 4rem;
+  background-color: grey;
   color: var(--white);
   position: relative;
   z-index: 500;
@@ -24,7 +26,7 @@ const Headers = styled.header`
 const Logo = styled.a`
   display: flex;
   align-items: center;
-  width: 2rem;
+  width: 2em;
   height: auto;
   cursor: pointer;
   img {
@@ -35,6 +37,7 @@ const Logo = styled.a`
 const Nav = styled.nav`
   width: 25rem;
   max-width: 40rem;
+  padding: 2px 1px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -42,8 +45,17 @@ const Nav = styled.nav`
   @media only Screen and (max-width: 48em) {
     display: none;
   }
+  img{
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    margin-left: 0.5rem;
+  }
   a {
     font-weight: 600;
+    padding: 10px;
     line-height: 1.5;
     color: var(--white);
     &::after {
@@ -56,7 +68,7 @@ const Nav = styled.nav`
     }
     &:not(:last-child):hover::after {
       width: 100%;
-      background: var(--purple);
+      background: var(--white);
     }
     /* &:not(:last-child) {
       margin-right: 2rem;
@@ -70,12 +82,12 @@ const Nav = styled.nav`
 `;
 
 const Button = styled.button`
-  background-color: var(--purple);
+  background-color: var(--white);
   padding: 0.5rem 1rem;
-  border-radius: 20px;
-  color: var(--white);
+  color: var(--black);
   font-weight: 600;
   cursor: pointer;
+  border-radius: 20px;
   transition: all 0.2s;
   &:hover {
     transform: scale(1.1);
@@ -100,8 +112,8 @@ const HamburgerBtn = styled.button`
   }
   position: relative;
   background-color: transparent;
-  width: 2rem;
-  height: 2px;
+  width: 1rem;
+  height: 2.5px;
   margin-top: 0rem;
   transition: all 0.3s;
   cursor: pointer;
@@ -110,7 +122,7 @@ const HamburgerBtn = styled.button`
     content: "";
     background-color: var(--white);
     width: 2rem;
-    height: 2px;
+    height: 1.5px;
     display: inline-block;
     position: absolute;
     left: 0;
@@ -130,13 +142,13 @@ const HamburgerBtn = styled.button`
 
 const MobileMenu = styled.nav`
   display: none;
+  height: 100vh;
   @media only Screen and (max-width: 48em) {
     display: flex;
   }
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem 0;
   overflow-x: hidden;
   position: absolute;
   top: 100%;
@@ -147,7 +159,6 @@ const MobileMenu = styled.nav`
   transition: all 0.5s;
   z-index: -10;
   background-color: rgb(53 53 63 / 95%);
-  border-radius: 20px;
   margin: 0.5rem;
   a {
     color: var(--white);
@@ -155,6 +166,9 @@ const MobileMenu = styled.nav`
     font-size: 1.5rem;
     margin: 1.5rem;
     cursor: pointer;
+  }
+  img {
+    margin-right: 0.5rem;
   }
 `;
 const Header = () => {
@@ -164,20 +178,16 @@ const Header = () => {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  const scrollUp = (id, e) => {
-    e.preventDefault();
-    const element = document.getElementById(id);
-    element.scrollIntoView({
-      behavior: "smooth",
-      block: "end",
-      inline: "nearest",
-    });
-  };
+  // const scrollUp = (id, e) => {
+  //   e.preventDefault();
+  //   const element = document.getElementById(id);
+  //   element.scrollIntoView({
+  //     behavior: "smooth",
+  //     block: "end",
+  //     inline: "nearest",
+  //   });
+  // };
 
-  const handleClick = (id, e) => {
-    setClick(!click);
-    scrollUp(id, e);
-  };
 
   useEffect(() => {
     const element = ref.current;
@@ -190,11 +200,11 @@ const Header = () => {
         top: "0",
         left: "0",
         right: "0",
-        padding: "1rem 2.5rem",
+        // padding: "1rem 2.5rem",
 
-        borderRadius: "0 0 50px 50px",
+        // borderRadius: "0 0 50px 50px",
 
-        border: "2px solid var(--white)",
+        // border: "2px solid var(--black)",
 
         duration: 1,
         ease: "power1.out",
@@ -212,11 +222,11 @@ const Header = () => {
         top: "1rem",
         left: "3rem",
         right: "3rem",
-        padding: "1.5rem 2rem",
+        // padding: "1.5rem 2rem",
 
-        borderRadius: "50px",
+        // borderRadius: "50px",
 
-        border: "3px solid var(--white)",
+        // border: "3px solid var(--black)",
 
         duration: 1,
         ease: "power1.out",
@@ -235,37 +245,37 @@ const Header = () => {
     <Headers ref={ref}>
       <Logo>
         <img src={logo} alt="CodeBucks" />
-        <h3>CodeBucks</h3>
+        <h3>Vestige</h3>
       </Logo>
       <Nav>
-        <a href="#home" onClick={(e) => scrollUp("home", e)}>
-          Home
+        <a href="#home">
+        <img src={twitter} alt="CodeBucks" />
         </a>
-        <a href="#about" onClick={(e) => scrollUp("about", e)}>
-          About Us
+        <a href="#about">
+        <img src={discord} alt="CodeBucks" />
         </a>
-        <a href="#services" onClick={(e) => scrollUp("services", e)}>
-          Services
+        <a href="#services">
+          Outerverse Vessels
         </a>
-        <a href="#contact" onClick={(e) => scrollUp("contact", e)}>
-          <Button>Contact Us</Button>
-        </a>
+        {/* <a href="#contact">
+          <Button>Discord</Button>
+        </a> */}
       </Nav>
       <HamburgerBtn clicked={click} onClick={() => setClick(!click)}>
         <span></span>
       </HamburgerBtn>
       <MobileMenu clicked={click}>
-        <a href="#home" onClick={(e) => handleClick("home", e)}>
-          Home
+        <a href="#home">
+          Follow the Twitter
         </a>
-        <a href="#about" onClick={(e) => handleClick("about", e)}>
-          About Us
+        <a href="#about">
+          Follow the Instagram
         </a>
-        <a href="#services" onClick={(e) => handleClick("services", e)}>
-          Services
+        <a href="#services">
+          Outerverse Vessels
         </a>
-        <a href="#contact" onClick={(e) => handleClick("contact", e)}>
-          <Button>Contact Us</Button>
+        <a href="#contact">
+          <Button>Join the Discord</Button>
         </a>
       </MobileMenu>
     </Headers>

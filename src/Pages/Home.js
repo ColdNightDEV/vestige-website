@@ -4,8 +4,7 @@
 import HeroSection from "../Sections/Hero/index";
 import About from "../Sections/About/index";
 import Services from "../Sections/Services/index";
-import Testimonials from "../Sections/Testimonials/index";
-import Contact from "../Sections/Contact/index";
+
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -22,8 +21,6 @@ const Home = () => {
       <HeroSection />
       <About />
       <Services />
-      <Testimonials />
-      <Contact />
     </Container>
   );
 };

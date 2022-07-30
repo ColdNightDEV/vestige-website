@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+@import url('http://fonts.cdnfonts.com/css/gobold');
+
+.container{
+  color: white;
+  display: flex;
+  gap: 20px;
+  background: #0071CE;
+  height: 800px;
+  font-size: 23px;
+  font-family: 'Gobold', sans-serif;
+  padding: 20px;
+  position: relative;
+  width: 100vw;
+}
+
+
+@media (max-width: 480px){
+  .container{
+    font-size: 10px;
+    height: 900px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 720px){
+  .container{
+    font-size: 12px;
+    height: 1000px;
+  }
+
+  .scroll-div > p {
+    padding: 2px;
+  }
+
+}
+
+.scroll-div {
+  margin-top: 100px;
+  position: absolute;
+}
+
+.scroll-div > h1 {
+  padding: 10px;
+}
+
+.scroll-div > p {
+  padding: 10px;
+}
