@@ -4,7 +4,7 @@ import './index.css';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
 
-function Services() {
+const Services = () => {
   const gap = useRef();
 
   useEffect(() =>  {
@@ -44,10 +44,10 @@ function Services() {
 
       return (
         <div id="services" ref={gap}>
-          {/* <div class="bodyImage"></div> */}
+          {/* <div className="bodyImage"></div> */}
           <div id="secondSection"></div>
-          <div class="container">
-          <div class="scroll-div">
+          <div className="container">
+          <div className="scroll-div">
             <h1>ABOUT US:</h1>
             <p>VESTIGE STUDIOS IS A CREATOR-LED ORGANIZATION IN THE WEB3 WORLD.</p>
             <p>OUR GOAL IS TO BRING THE VIRTUAL WORLD TO LIFE THROUGH</p>
